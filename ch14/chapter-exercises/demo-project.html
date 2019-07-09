@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo Project</title>
+</head>
+<body>
+    
+    <button id="minus" onClick="changeNbr(-1)">-</button>
+    <input id="theNbr" type="text" value="0" size="5" style="font-size: 16pt; max-width: 40pt; max-height: 60pt; text-align: center">
+    <button id="plus" onClick="changeNbr(1)">+</button>
+    
+    <script>
+        let nbr = 0;
+        function changeNbr(changeVal){
+            nbr = nbr + Number(changeVal);
+            let nbrCtrl = document.getElementById("theNbr");
+            nbrCtrl.value = nbr;
+            let evenOdd = nbr % 2;
+            nbrCtrl.style.color = "black";
+            nbrCtrl.style.fontStyle = "normal";
+            nbrCtrl.style.fontSize = "16pt";
+            if (evenOdd == 0) {
+                nbrCtrl.style.color = "red";
+            }
+            if(nbr % 3 == 0) {
+                nbrCtrl.style.fontStyle = "italic";
+            }
+            if(nbr % 7 == 0) {
+                nbrCtrl.style.fontSize = "18pt";
+            }
+        }
+           
+            
+    </script>
+</body>
+</html>

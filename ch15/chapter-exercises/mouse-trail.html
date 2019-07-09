@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            height: 200px;
+            background: lightskyblue;
+        }
+        .dot {
+            height: 8px; width: 8px;
+            border-radius: 4px;
+            background: red;
+            position: absolute;
+        }
+        .square {
+            height: 8px; width: 8px;
+            background: orange;
+            position: absolute;
+        }
+        .oval {
+            height: 8px; width: 16px;
+            border-radius: 4px;
+            background: yellow;
+            position: absolute;
+        }
+        .rectangle {
+            height: 8px; width: 16px;
+            background: green;
+            position: absolute;
+        }
+        .secondDot {
+            height: 8px; width: 8px;
+            border-radius: 4px;
+            background: blue;
+            position: absolute;
+        }
+        .square2 {
+            height: 16px; width: 16px;
+            background: indigo;
+            position: absolute;
+        }
+        .square3 {
+            height: 16px; width: 16px;
+            background: purple;
+            position: absolute;
+        }
+        </style>
+    <title>Mouse Trail</title>
+</head>
+<body>
+    <script>
+        window.addEventListener("mousemove", event => {
+            let dot = document.createElement("div");
+            dot.className = "dot";
+            dot.style.left = (event.pageX - 60) + "px";
+            dot.style.top = (event.pageY - 60) + "px";
+            document.body.appendChild(dot);
+            let square = document.createElement("div");
+            square.className = "square";
+            square.style.left = (event.pageX - 55) + "px";
+            square.style.top = (event.pageY - 55) + "px";
+            document.body.appendChild(square);
+            let oval = document.createElement("div");
+            oval.className = "oval";
+            oval.style.left = (event.pageX - 50) + "px";
+            oval.style.top = (event.pageY - 50) + "px";
+            document.body.appendChild(oval);
+            let rectangle = document.createElement("div");
+            rectangle.className = "rectangle";
+            rectangle.style.left = (event.pageX - 45) + "px";
+            rectangle.style.top = (event.pageY - 45) + "px";
+            document.body.appendChild(rectangle);
+            let secondDot = document.createElement("div");
+            secondDot.className = "secondDot";
+            secondDot.style.left = (event.pageX - 40) + "px";
+            secondDot.style.top = (event.pageY - 40) + "px";
+            document.body.appendChild(secondDot);
+            let square2 = document.createElement("div");
+            square2.className = "square2";
+            square2.style.left = (event.pageX - 35) + "px";
+            square2.style.top = (event.pageY - 35) + "px";
+            document.body.appendChild(square2);
+        });
+        window.removeEventListener("mouseup", moved);
+    </script>
+    
+</body>
+</html>

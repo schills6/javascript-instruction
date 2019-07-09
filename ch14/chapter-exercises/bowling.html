@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bowling</title>
+</head>
+<body>
+    <h1>LET'S BOWL!</h1>
+    <button onClick="bowlIt()">Bowl</button>
+    <h2>Frames</h2>
+    <div id="frames">Frame scores go here...</div>
+    <label>Total: </label><input type="text" id="total" value="score goes here">
+    <script>
+        function bowlIt() {
+            let frames = [];
+            let sum = 0;
+            for (let i = 0; i < 10; i++) {
+                    let frame = Math.floor(Math.random() * 11);
+                    frames.push(frame);
+                    sum += frame;
+                }
+            let framesDiv = document.getElementById("frames");
+            framesDiv.innerHTML=frames;
+            document.getElementById("total").value=sum;
+        }
+                    
+        
+    </script>
+   
+    
+</body>
+</html>

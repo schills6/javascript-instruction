@@ -1,0 +1,32 @@
+<html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name ="viewport" content="width=device-width", initial-scale=1.0>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Get A Tags</title>
+    </head>
+    <body>
+        <h1>Some links</h1>
+        <a href="https://eloquentjavascript.net/14_dom.html">js book</a><br>
+        <a href="https://www.cnn.com">cnn</a><br>
+        <a href="https://www.google.com">google</a><br>
+        <script type="text/javascript">
+            let link = document.body.getElementsByTagName("a")[2];
+            console.log(link.href);
+            let links=document.body.getElementsByTagName("a");
+            console.log("enhanced for");
+            for (let link of links) {
+                console.log(link.href);
+            }
+            console.log("old school for")
+            for (let i = 0; i < links.length; i++) {
+                console.log(links[i].href);
+            }
+            
+            
+        </script>
+    </body>
+    </html>
+

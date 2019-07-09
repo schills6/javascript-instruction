@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Put Something Here</title>
+</head>
+<body>
+    <p id="put">Put something here</p>
+    
+
+    <script>
+        function replaceText() {
+            let put = document.getElementById("put");
+            let text = document.createTextNode("I love Fridays");
+            put.parentNode.replaceChild(text, put);   
+        }
+
+        console.log(replaceText("put"));
+
+    </script>
+
+</body>
+</html>
+
